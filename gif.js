@@ -32,7 +32,8 @@ function displaylandscape(data) {
             .attr("data-state", "animate")
             .attr("data-still", imageList[i].images.downsized_still.url)
             .attr("data-animate", imageList[i].images.downsized_medium.url);
-        landscapeDiv.append(landscapeImage, landscapeRating);
+        landscapeDiv.append(landscapeImage, "Rating: "+landscapeRating);
+        
         $("#landscape-info").prepend(landscapeDiv);
     } 
 }
@@ -47,7 +48,6 @@ $("#add-landscape").on("click", function (event) {
     renderButtons();
 
     $("#landscape-input").val("");//This clear the filed after clicking on "Add"
-
 })
 
 

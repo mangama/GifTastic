@@ -1,12 +1,58 @@
-button,
 div,
 form,
 input {
-    margin: 10px;
+    margin: 10px;  
 }
-
-
 
 body {
+    /* background-image: url("backgroundPic.jpg"); */
+    /* background-size: 1500px 800px; */
+    /* background-attachment: fixed; */
+    background-color: rgb(143, 175, 95);
+}
+
+button  {
+    background: rgb(251, 251, 129);
+    margin: 10px;
+    border-radius: .4em;
+    font-size: 12px;
+    padding: 5px 5px 5px 5px;
 
 }
+
+#add-landscape  {
+    border-radius: .4em;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(115, 159, 255);
+    width: 100px;
+    height:40px;
+
+}
+
+#landscape-buttons  {
+    font-size: 14px;
+    border: 10px color chocolate ;
+}
+
+h1{
+    font-size: 32px;
+    font-style: italic;
+    font-weight: bold;
+}
+.addButton {
+/* margin-left:700px; */
+}
+
+#landscape-input {
+ 
+}
+
+/* #add-landscape  {
+    background-color: aquamarine;
+    position:left;
+}
+
+#landscape-input .submitClass {
+    position: left;
+} */
