@@ -14,7 +14,7 @@ body {
 button  {
     background: rgb(251, 251, 129);
     margin: 10px;
-    border-radius: .4em;
+    border-radius: .37em;
     font-size: 12px;
     font-weight: bold;
     padding: 3px 5px 3px 5px;
@@ -22,12 +22,13 @@ button  {
 }
 
 #add-landscape  {
-    border-radius: .4em;
+    border-radius: .37em;
     font-size: 14px;
     font-weight: bold;
     background-color: rgb(115, 159, 255);
     width: 100px;
-    height:40px;
+    height:35px;
+    margin-left:20px;
 }
 
 #landscape-buttons  {
@@ -40,29 +41,31 @@ h1{
     font-style: italic;
     font-weight: bold;
 }
-.addButton {
+
+ h2{
+    font-size: 14px;
+ }
+/* .addButton {
 margin-left:700px;
-}
+} */
 
-.landscapeClass {
-
-}
 
 #landscape-info {
-    position: relative;
-
+   float:left;
 }
 
 label{
-    position: left;
+    float: left;
+    margin-left:10px;
     /* margin-left: 30px; */
 }
-.col-md-8   {
+/* .col-md-8   {
     margin-left:20px;
-}
+} */
  img{
      /* margin:20px; */
-     margin-bottom:10px;
+     margin:0 10px 20px 0;
+     float:left;
  }
 /* #landscape-input {
  

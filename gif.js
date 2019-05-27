@@ -1,6 +1,6 @@
 // initial array of landscapes
-var topics = ["Rain forest nature landscapes", "Rain forest nature", "Green nature landscapes","Green nature", "Green nature landscapes",
-            "Vegetation and rain landscapes", "Vegetation and rain", "Nature landscapes","Nature", "Green nature landscapes", "Green nature"];
+var topics = ["Rain forest nature landscapes", "Rain forest nature", "Green nature landscapes", "Green nature", "Green nature landscapes",
+    "Vegetation and rain landscapes", "Vegetation and rain", "Nature landscapes", "Nature", "Green nature landscapes", "Green nature"];
 
 
 
@@ -23,19 +23,20 @@ function displaylandscape(data) {
     var landscapeDiv = $("<div class='landscape'>");
     var imageList = data.data;
 
-    for (var i = 0; i < imageList.length; i++) { 
+    for (var i = 0; i < imageList.length; i++) {
 
-        var landscapeRating = $("<h2>").text(imageList[i].rating);
-        var landscapeImage = $("<img class='landscapeClass'>")
+        var landscapeRating = $("<h2>").text("Rating: " + imageList[i].rating);
+        var landscapeImage = $("<img >")
             .attr("src", imageList[i].images.downsized_medium.url)
             .attr("alt", imageList[i].title)
             .attr("data-state", "animate")
             .attr("data-still", imageList[i].images.downsized_still.url)
             .attr("data-animate", imageList[i].images.downsized_medium.url);
-        landscapeDiv.append(landscapeImage, "Rating: "+landscapeRating);
-        
+        landscapeDiv.append(landscapeRating, landscapeImage);
+        // $("<div>")
+
         $("#landscape-info").prepend(landscapeDiv);
-    } 
+    }
 }
 
 $("#add-landscape").on("click", function (event) {
@@ -80,10 +81,10 @@ $("#landscape-info").on("click", ".landscapeClass", function () {
     // Then, set the image's data-state to animate
     // Else set src to the data-still value
     if (state === "still") {
-      $(this).attr("src", $(this).attr("data-animate"));
-      $(this).attr("data-state", "animate");
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
     } else {
-      $(this).attr("src", $(this).attr("data-still"));
-      $(this).attr("data-state", "still");
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
     }
 });
