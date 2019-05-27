@@ -18,12 +18,12 @@ function renderButtons() {
 }
 
 function displaylandscape(data) {
-    // console.log(data);
+    console.log(data);
 
     var landscapeDiv = $("<div class='landscape'>");
     var imageList = data.data;
 
-    for (var i = 0; i < imageList.length; i++) {
+    for (var i = 0; i < imageList.length; i++) { 
 
         var landscapeRating = $("<h2>").text(imageList[i].rating);
         var landscapeImage = $("<img class='landscapeClass'>")

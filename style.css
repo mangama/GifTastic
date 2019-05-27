@@ -16,8 +16,9 @@ button  {
     margin: 10px;
     border-radius: .4em;
     font-size: 12px;
-    padding: 5px 5px 5px 5px;
-
+    font-weight: bold;
+    padding: 3px 5px 3px 5px;
+    color: rgb(104, 104, 104);
 }
 
 #add-landscape  {
@@ -27,12 +28,11 @@ button  {
     background-color: rgb(115, 159, 255);
     width: 100px;
     height:40px;
-
 }
 
 #landscape-buttons  {
     font-size: 14px;
-    border: 10px color chocolate ;
+    border: 10px color rgb(245, 133, 54) ;
 }
 
 h1{
@@ -41,12 +41,32 @@ h1{
     font-weight: bold;
 }
 .addButton {
-/* margin-left:700px; */
+margin-left:700px;
 }
 
-#landscape-input {
- 
+.landscapeClass {
+
 }
+
+#landscape-info {
+    position: relative;
+
+}
+
+label{
+    position: left;
+    /* margin-left: 30px; */
+}
+.col-md-8   {
+    margin-left:20px;
+}
+ img{
+     /* margin:20px; */
+     margin-bottom:10px;
+ }
+/* #landscape-input {
+ 
+} */
 
 /* #add-landscape  {
     background-color: aquamarine;
