@@ -25,16 +25,14 @@ function displaylandscape(data) {
 
     for (var i = 0; i < imageList.length; i++) {
 
-        var landscapeRating = $("<h2>").text("Rating: " + imageList[i].rating);
-        var landscapeImage = $("<img >")
+        var landscapeRating = $("<h2>").text("Rating: " + imageList[i].rating) ;
+        var landscapeImage = $("<img>")
             .attr("src", imageList[i].images.downsized_medium.url)
             .attr("alt", imageList[i].title)
             .attr("data-state", "animate")
             .attr("data-still", imageList[i].images.downsized_still.url)
             .attr("data-animate", imageList[i].images.downsized_medium.url);
         landscapeDiv.append(landscapeRating, landscapeImage);
-        // $("<div>")
-
         $("#landscape-info").prepend(landscapeDiv);
     }
 }

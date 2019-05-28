@@ -67,6 +67,11 @@ label{
      margin:0 10px 20px 0;
      float:left;
  }
+
+ .container {
+     padding: 100px;
+
+ }
 /* #landscape-input {
  
 } */
