@@ -5,9 +5,6 @@ input {
 }
 
 body {
-    /* background-image: url("backgroundPic.jpg"); */
-    /* background-size: 1500px 800px; */
-    /* background-attachment: fixed; */
     background-color: rgb(143, 175, 95);
 }
 
@@ -42,45 +39,23 @@ h1{
     font-weight: bold;
 }
 
- h2{
+ p{
     font-size: 14px;
  }
-/* .addButton {
-margin-left:700px;
-} */
 
 
-#landscape-info {
-   float:left;
-}
 
 label{
-    float: left;
     margin-left:10px;
-    /* margin-left: 30px; */
 }
-/* .col-md-8   {
-    margin-left:20px;
-} */
+
  img{
-     /* margin:20px; */
      margin:0 10px 20px 0;
-     float:left;
  }
 
  .container {
      padding: 100px;
 
  }
-/* #landscape-input {
- 
-} */
 
-/* #add-landscape  {
-    background-color: aquamarine;
-    position:left;
-}
 
-#landscape-input .submitClass {
-    position: left;
-} */

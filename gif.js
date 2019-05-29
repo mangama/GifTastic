@@ -19,22 +19,24 @@ function renderButtons() {
 function displaylandscape(data) {
     console.log(data);
 
-    var landscapeDiv = $("<div class='landscape'>");
+  
     var imageList = data.data;
 
     for (var i = 0; i < imageList.length; i++) {
-
-        var landscapeRating = $("<h2>").text("Rating: " + imageList[i].rating) ;
+        var landscapeDiv = $("<div class=\"landscape\">");
+        var landscapeRating = $("<p>").text("Rating: " + imageList[i].rating) ;
         var landscapeImage = $("<img>")
             .attr("src", imageList[i].images.downsized_medium.url)
             .attr("alt", imageList[i].title)
             .attr("data-state", "animate")
             .attr("data-still", imageList[i].images.downsized_still.url)
             .attr("data-animate", imageList[i].images.downsized_medium.url);
-        landscapeDiv.append(landscapeRating, landscapeImage);
+        landscapeDiv.append(landscapeRating);
+        landscapeDiv.append(landscapeImage);
         $("#landscape-info").prepend(landscapeDiv);
     }
 }
+
 
 $("#add-landscape").on("click", function (event) {
     //Overriding the default submit button behavior   
