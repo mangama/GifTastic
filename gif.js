@@ -38,20 +38,42 @@ function displaylandscape(data) {
 }
 
 
+//=======================================================
+
+// $("#add-animal").on("click", function(event) {
+//     event.preventDefault();
+//     var newAnimal = $("input").eq(0).val();
+
+//     if (newAnimal.length > 2) {
+//       animals.push(newAnimal);
+//     }
+
+//     populateButtons(animals, "animal-button", "#animal-buttons");
+
+//   });
+
+  //===============================
+
+
+
 $("#add-landscape").on("click", function (event) {
     //Overriding the default submit button behavior   
     event.preventDefault();
-
+   
+    
     //.val() gets the value, .val("") sets the value
     var landscape = $("#landscape-input").eq(0).val().trim(); //collect the value
     
     if (topics.length>2)    {
         topics.push(landscape);// This update the landscapes array with our latest landscape
+    
     } 
+    renderButtons(topics,"lanscape","#landscape-buttons");
 
-    $("#landscape-input").val("");//This clear the filed after clicking on "Add"
+    //This clear the filed after clicking on "Add"
+    
 })
-renderButtons(topics,"button", "#landscape-buttons");
+renderButtons(topics,"lanscape","#landscape-buttons");
 
 
 //Main process
