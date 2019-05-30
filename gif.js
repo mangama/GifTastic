@@ -1,3 +1,5 @@
+
+
 // initial array of landscapes
 var topics = ["Rain forest nature landscapes", "Rain forest nature", "Green nature landscapes", "Green nature", "Green nature landscapes",
     "Vegetation and rain landscapes", "Vegetation and rain", "Nature landscapes", "Nature", "Green nature landscapes", "Green nature"];
@@ -17,14 +19,12 @@ function renderButtons() {
 }
 
 function displaylandscape(data) {
-    console.log(data);
-
-  
+    // console.log(data);
     var imageList = data.data;
 
     for (var i = 0; i < imageList.length; i++) {
         var landscapeDiv = $("<div class=\"landscape\">");
-        var landscapeRating = $("<p>").text("Rating: " + imageList[i].rating) ;
+        var landscapeRating = $("<p>").text("Rating: " + imageList[i].rating);
         var landscapeImage = $("<img>")
             .attr("src", imageList[i].images.downsized_medium.url)
             .attr("alt", imageList[i].title)
@@ -37,26 +37,25 @@ function displaylandscape(data) {
     }
 }
 
-
 $("#add-landscape").on("click", function (event) {
-    //Overriding the default submit button behavior   
+    //Overriding the default submit button behavior
     event.preventDefault();
-   
-    
-    //.val() gets the value, .val("") sets the value
-    var landscape = $("#landscape-input").eq(0).val().trim(); //collect the value
-    
-    if (topics.length>2)    {
-        topics.push(landscape);// This update the landscapes array with our latest landscape
-    
-    } 
-    //This clear the filed after clicking on "Add"
-    $("#landscape-input").val("");
-    renderButtons(topics,"lanscape","#landscape-buttons");
 
-    
+    //.val() gets the value, .val("") sets the value
+    var landscape = $("#landscape-input")
+        .eq(0)
+        .val()
+        .trim(); //collect the value
+    if (landscape.length === 0) {
+
+    } else if (landscape.length > 0) {
+        topics.push(landscape);
+    }
+    $("#landscape-input").val("");
+    renderButtons(topics, "lanscape", "#landscape-buttons");
 })
-renderButtons(topics,"lanscape","#landscape-buttons");
+
+renderButtons(topics, "lanscape", "#landscape-buttons");
 
 
 //Main process
