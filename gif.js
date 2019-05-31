@@ -65,7 +65,7 @@ renderButtons();
 $("#landscape-buttons").on("click", ".display-images-button", function () {
     var title = $(this).attr("data-tittle");
     // for later 
-    var queryURL = `http://api.giphy.com/v1/gifs/search?q=${title}&api_key=B23uy0t41LJrEzhJfVl45uC2zCs7ZbhR&limit=10`;
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${title}&api_key=B23uy0t41LJrEzhJfVl45uC2zCs7ZbhR&limit=10`;
 
     $.ajax({
         method: "GET",
