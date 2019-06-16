@@ -23,7 +23,7 @@ function displaylandscape(data) {
     var imageList = data.data;
 
     for (var i = 0; i < imageList.length; i++) {
-        var landscapeDiv = $("<div class=\"landscape\">");
+        var landscapeDiv = $("<div class=\"col-md-sm-3 landscape\">");
         var landscapeRating = $("<p>").text("Rating: " + imageList[i].rating);
         var landscapeImage = $("<img>")
             .attr("src", imageList[i].images.downsized_medium.url)
@@ -72,6 +72,7 @@ $("#landscape-buttons").on("click", ".display-images-button", function () {
         url: queryURL
         //The response below is the data. Response only resides insode this function
     }).then(function (response) {
+        console.log(response);
         //.then has the landscape data that we want to use to create a new landscape. In order to do that, we need to call the 
         //displaylandscape function and give it the data about this landscape.
         displaylandscape(response);
