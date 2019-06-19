@@ -28,7 +28,7 @@ function displaylandscape(data) {
         var landscapeImage = $("<img>")
             .attr("src", imageList[i].images.fixed_height_still.url)
             .attr("alt", imageList[i].title)
-            .attr("data-state", "animate")
+            .attr("data-state", "still")
             .attr("data-still", imageList[i].images.fixed_height_still.url)
             .attr("data-animate", imageList[i].images.downsized_medium.url);
         landscapeDiv.append(landscapeRating);
